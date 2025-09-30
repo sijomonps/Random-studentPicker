@@ -1,7 +1,10 @@
-# 🎓 MCA 2025-2027 Student Picker  
+<h1 align="center">MCA 2025-2027 Student Picker  </h1>
 
-A **simple, fun, and beautifully animated** web application to randomly select a student from our class.  
-No more boring number generators!  
+<p align="center">
+A simple, fun, and beautifully animated web application to randomly select a student from our class.
+<br />
+No more boring number generators!
+</p>
 
 ---
 
