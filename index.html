@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Picker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="initial-view">
+            <button class="main-button" id="start-picker-btn">Pick a Student</button>
+        </div>
+        
+        <div id="loading-view">
+            <p class="loading-text" id="loading-text-element"></p>
+        </div>
+
+        <h1 class="header-title">MCA 2025-2027</h1>
+    </div>
+
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-content">
+            <h2>The Chosen One Is</h2>
+            <p class="student-name" id="student-name-display"></p>
+            <button class="again-button" id="pick-again-btn">Pick Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
