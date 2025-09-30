@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const students = [
         "ABHINAV RAJESH", "ABINTO TENNICHAN", "ABY JOSEPH", "ADHIL SHAJAHAN", "ADHITHYAN V S", "AKHIL S", 
         "ALAN AUGUSTHY", "ALAN DILEEP", "ALBERT CYRIAC", "ALBIN GEORGE", "ALBIN SAJU", "ALJO TENNIS", 
-        "Alphin Joby", "AMAL THOMAS", "ANJANA V U", "ANN MARY", "ANNIE JOBEN", "ASHIN MATHEW LALICHAN", 
-        "ASNI ANSARI FATHIMA", "ATHULYA M NAIR", "Ayush S", "BIBIN JOSEPH", "BINITTA SAJI", "BLESSON", 
-        "CHRISTOPHER JOE", "CYRIL THOMAS", "DENIL JOSEPH SUNU", "Deva Nandhanan S", "DYVIN BIJU", 
-        "GOURI NANDHAN P V", "J Sreeleha", "JOSEPH DOMINIC", "JOYALJOSHEY", "KIRAN Kuruvalla", 
+        "ALPHIN JOBY", "AMAL THOMAS", "ANJANA V U", "ANN MARY", "ANNIE JOBEN", "ASHIN MATHEW", 
+        "ASNI ANSARI FATHIMA", "ATHULYA M NAIR", "AYUSH S", "BIBIN JOSEPH", "BINITTA SAJI", "BLESSON", 
+        "CHRISTOPHER JOE", "CYRIL THOMAS", "DENIL JOSEPH SUNU", "DEVA NANDHANAN S", "DYVIN BIJU", 
+        "GOURI NANDHAN P V", "J SREELEKHA", "JOSEPH DOMINIC", "JOYAL JOSHEY", "KIRAN KURUVILA", 
         "LIVIA SHAIJAN", "M KIRAN", "MARIATT JOSEPH", "MEGHA BABY", "MEHA MARY SAMUVEL", "MELVIN MATHEW", 
         "MOBIN VARGHESE", "MUHAMMED RAIHAN", "NV EDWIN", "NOBLE SUNIL", "POOJA L", "RENJITHA V R", 
         "RIYA BOBAN", "RIYA GEORGE", "ROYAL LOUIS", "S GAUTHAM NARAYAN", "SANTHANA RAVEENDRAN", 
@@ -14,12 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const preSelectionTexts = [
-        "Picking the most powerful person...",
-        "Searching for the legend...",
-        "Who is the greatest of all time?",
-        "Destiny is calling a name...",
-        "Analyzing academic signatures...",
-        "Calculating potential greatness..."
+        "Choosing the sharpest mind... 🔍",
+        "Finding the smartest one... 🧠",
+        "The Legend of MCA... 😌",
+        "Calculating the next academic champion... 📚",
+        "Choosing today’s genius... 🏆",
+        "Searching for the top student... 📖",
+        "Finding the class champion... 🏅",
+        "The Star of Marian College...😎",
+        "Finding today’s class genius... 🏆",
+        "Who’s got the best brain today? 🧠"
     ];
 
     const startBtn = document.getElementById('start-picker-btn');
@@ -29,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultModal = document.getElementById('result-modal');
     const studentNameDisplay = document.getElementById('student-name-display');
     const pickAgainBtn = document.getElementById('pick-again-btn');
+    const quickModeToggle = document.getElementById('quick-toggle-checkbox');
 
     let textInterval;
     let lastIndex = -1;
@@ -45,7 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
             loadingView.style.transform = 'scale(1)';
         }, 400);
 
-        // 3. Animate the loading text randomly
+        // 3. Animate the loading text randomly based on Quick Mode
+        const isQuickMode = quickModeToggle.checked;
+        
+        const intervalDuration = isQuickMode ? 700 : 2500;
+        const totalDuration = isQuickMode ? 1600 : 7800;
+        const animationDuration = isQuickMode ? 0.7 : 2.5;
+
+        loadingTextElement.style.animationDuration = `${animationDuration}s`;
+        
         const showRandomText = () => {
             let randomIndex;
             do {
@@ -60,10 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         showRandomText(); // Show the first text immediately
-        textInterval = setInterval(showRandomText, 2500); // Change text every 2.5 seconds
+        textInterval = setInterval(showRandomText, intervalDuration);
 
         // 4. After a few seconds, show the result
-        setTimeout(showResult, 7800); // Total loading time
+        setTimeout(showResult, totalDuration);
     }
 
     function showResult() {
@@ -95,3 +108,4 @@ document.addEventListener('DOMContentLoaded', () => {
     startBtn.addEventListener('click', startPicking);
     pickAgainBtn.addEventListener('click', resetPicker);
 });
+
