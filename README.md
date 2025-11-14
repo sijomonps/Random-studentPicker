@@ -1,5 +1,3 @@
-<img width="1104" height="741" alt="image" src="https://github.com/user-attachments/assets/2de164d8-96e7-47be-b78a-8f698da1a78c" /><h1 align="center">MCA 2025–2027 Student Picker</h1>
-
 <p align="center">
 A simple and fun web app to randomly pick a student from our class.
 </p>
