@@ -1,3 +1,5 @@
+<h1 align="center">MCA 2025–2027 Student Picker</h1>
+
 <p align="center">
 A simple and fun web app to randomly pick a student from our class.
 </p>
