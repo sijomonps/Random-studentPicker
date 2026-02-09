@@ -176,10 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // 3. Animate the loading text randomly based on Quick Mode
         const isQuickMode = quickModeToggle.checked;
         
-        // Quick mode is faster; non-quick mode shows each text longer
-        const intervalDuration = isQuickMode ? 500 : 8000; // ms between text changes (quick = 100ms)
-        const totalDuration = isQuickMode ? 500 : 31000; // total picking duration in ms (quick = 800ms)
-        const animationDuration = isQuickMode ? 0.12 : 8.0; // CSS animation seconds
+        // Make both modes much faster
+        const intervalDuration = isQuickMode ? 1000 : 2500; // ms between text changes (quick = 1s, normal = 2.5s)
+        const totalDuration = isQuickMode ? 2500 : 7000; // total picking duration in ms (quick = 2.5s, normal = 7s)
+        const animationDuration = isQuickMode ? 1.0 : 2.5; // CSS animation seconds
 
         loadingTextElement.style.animationDuration = `${animationDuration}s`;
         
